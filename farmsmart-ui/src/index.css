@@ -1,0 +1,45 @@
+@import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;900&family=Outfit:wght@400;600;700;900&display=swap');
+
+body {
+  margin: 0;
+  font-family: 'Inter', sans-serif;
+  /* We will use a fixed background in App.jsx for better control, but keep a fallback here */
+  background-color: #F8FAF9;
+}
+
+h1, h2, h3, h4, h5, h6, .font-heading {
+  font-family: 'Outfit', sans-serif;
+}
+
+/* Custom Scrollbar for a premium feel */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 10px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #94a3b8;
+}
+
+@keyframes scan {
+  0% { top: 0% }
+  50% { top: 100% }
+  100% { top: 0% }
+}
+
+.animate-scan {
+  position: absolute;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: rgba(52, 211, 153, 0.6);
+  box-shadow: 0 0 20px rgba(52, 211, 153, 0.8);
+  animation: scan 3s ease-in-out infinite;
+  z-index: 20;
+}
